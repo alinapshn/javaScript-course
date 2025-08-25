@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!-- 9a -->
+    <button>9a</button>
+
+    <!-- 9b -->
+    <p><button class="js-button">9b</button></p>
+
+    <!-- 9c -->
+    <button
+      onclick="
+    document.querySelector('.js-click').innerHTML = 'You chose: heads'"
+    >
+      heads
+    </button>
+    <button
+      onclick="
+    document.querySelector('.js-click').innerHTML = 'You chose: tails'"
+    >
+      tails
+    </button>
+
+    <p class="js-click"></p>
+
+    <!-- 9d -->
+    <input
+      placeholder="name"
+      class="js-input"
+      onkeydown="handleSubmitKeyDown(event)"
+    />
+    <button onclick="nameSubmit()">Submit</button>
+    <p class="js-input-par"></p>
+
+    <!-- 9h -->
+    <input
+      class="js-input-9h"
+      onkeyup="
+      let onkeyupp = document.querySelector('.js-input-9h');
+      document.querySelector('.js-onkeyup-par').innerHTML = onkeyupp.value;
+    "
+    />
+    <p class="js-onkeyup-par"></p>
+
+    <script>
+      // 9a
+      console.log(document.querySelector("button"));
+
+      // 9b
+      document.querySelector(".js-button").innerHTML = "9b done";
+
+      // 9e
+      function nameSubmit() {
+        let text = document.querySelector(".js-input").value;
+        document.querySelector(
+          ".js-input-par"
+        ).innerHTML = `your name is: ${text}`;
+      }
+
+      function handleSubmitKeyDown(event) {
+        if (event.key === "Enter") {
+          nameSubmit();
+        }
+      }
+    </script>
+  </body>
+</html>
