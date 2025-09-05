@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!-- 12c -->
+    <button class="js-button">Start</button>
+
+    <!-- 12e -->
+    <div>
+      <button onclick="message()">Add to cart</button>
+      <p class="js-message"></p>
+    </div>
+
+    <!-- 12h -->
+    <div>
+      <button
+        onclick="
+        messages++;
+        displayNotofication();
+        "
+      >
+        Add
+      </button>
+      <button
+        onclick="
+        if (messages > 0) {
+            messages--;
+            if (messages === 0) {
+                stopNotification()
+            }
+        }
+      "
+      >
+        Remove
+      </button>
+    </div>
+
+    <script src="./scripts/12-homework.js"></script>
+  </body>
+</html>
